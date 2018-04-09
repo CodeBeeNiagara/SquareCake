@@ -1,5 +1,5 @@
 # SquareCake
-Integrate Square with Cakephp 2.x
+Integrate Square Connect API with Cakephp 2.x and accept credit card payments online
 
 ## Step 1 Set Up As Vendor
 
