@@ -49,11 +49,17 @@ In your controller create a function called squareConnect
 
 ```
 public function squareConnect() {
-///put the contents of your connection file (see https://github.com/square/connect-api-examples) here
-// remove line require 'vendor/autoload.php';
-//fill in your access token
-$access_token = 'sandbox-1234567qwert';
-....
+	 $this->autoRender = false;
+	 $this->response->type('json');
+	// put the contents of your connection file (see https://github.com/square/connect-api-examples) here
+	// remove line require 'vendor/autoload.php';
+	// fill in your access token
+	$access_token = 'sandbox-1234567qwert';
+	....
+	//edit php echo lines so they render as json 
+	$json = json_encode($response);
+	$this->response->body($json);
+
 }
  
 ## Step 2 Controller
