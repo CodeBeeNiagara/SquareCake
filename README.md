@@ -54,4 +54,5 @@ public function squareConnect() {
 ....
 }
  
-
+## Step 2 Controller
+In your form use action="controller/squareConnect"
