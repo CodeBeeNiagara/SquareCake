@@ -45,5 +45,13 @@ spl_autoload_register(function ($class) {
 	   }
 });
 ```
+In your controller create a function called squareConnect
 
+```
+public function squareConnect() {
+///put the contents of your connection file (see https://github.com/square/connect-api-examples) here
+// remove line require 'vendor/autoload.php';
+....
+}
+ 
 
