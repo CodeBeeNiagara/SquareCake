@@ -15,6 +15,35 @@ if (!defined('SQUARE_ROOT')) {
 ```
 
 Create a folder in app/Vendor called SquareConnect and upload the library https://github.com/square/connect-php-sdk
+Edit this line:
 
+```
+$base_dir = __DIR__ . '/lib/';
+```
+
+to read:
+
+```
+$base_dir = __DIR__;
+```
+
+## Step 2 Controller
+
+In the controller you want to use Square put these lines above the class declaration:
+
+```
+App::import('Vendor', 'SquareConnect', array('file' => 'SquareConnect.php'));
+
+ 
+spl_autoload_register(function ($class) {
+	  foreach (App::path('Vendor') as $base) {
+		    $path = $base . str_replace('\\', DS, $class) . '.php';
+		        if (file_exists($path)) {
+			        include $path;
+			        return;
+		    }
+	   }
+});
+```
 
 
