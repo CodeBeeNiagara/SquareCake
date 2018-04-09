@@ -14,7 +14,7 @@ if (!defined('SQUARE_ROOT')) {
 }
 ```
 
-Create a folder in app/Vendor called SquareConnect and upload the library https://github.com/square/connect-php-sdk
+Create a folder in app/Vendor called SquareConnect and upload the library (lib folder only)  https://github.com/square/connect-php-sdk
 Open autoloader.php and edit this line:
 
 ```
